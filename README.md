@@ -7,10 +7,10 @@
 
 ## Screenshots
 
-| Registration                                                                                                                                                   | Login                                                                                                                                         | Home                                                                                                      |  ImageDetails                                                                                                      | 
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| [![IMAGE](https://github.com/KareemAbuRejila/quotesApp/blob/main/Screenshot_home.png)] | [![IMAGE](https://github.com/KareemAbuRejila/quotesApp/blob/main/Screenshot_quotes.png)](https://www.youtube.com/watch?v=sklPpTf7Yj8) | [![IMAGE](https://github.com/KareemAbuRejila/quotesApp/blob/main/Screenshot_about.png)] | [![IMAGE](https://github.com/KareemAbuRejila/quotesApp/blob/main/Screenshot_about.png)] |
 
+| Photo1                                                                                                            | Photo2                                                                                                             |
+|-------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| [![IMAGE](https://github.com/KareemAbuRejila/ImageSliderCompose/blob/main/images/Screenshot_20240921_211258.png) | [![IMAGE](https://github.com/KareemAbuRejila/ImageSliderCompose/blob/main/images/Screenshot_20240921_211348.png) |
 ## Built With 🛠
 
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android

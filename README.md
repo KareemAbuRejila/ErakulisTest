@@ -1,6 +1,6 @@
 # 💭 Erakulis Challenge App 💭
 
-<img src="https://github.com/KareemAbuRejila/quotesApp/blob/main/thumbnail.png?raw=true" width="750">
+<img src="https://github.com/KareemAbuRejila/ErakulisTest/blob/main/thumbnail.png?raw=true" width="750">
 
 
 📱
@@ -8,9 +8,9 @@
 ## Screenshots
 
 
-| Photo1                                                                                                            | Photo2                                                                                                             |
-|-------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [![IMAGE](https://github.com/KareemAbuRejila/ImageSliderCompose/blob/main/images/Screenshot_20240921_211258.png) | [![IMAGE](https://github.com/KareemAbuRejila/ImageSliderCompose/blob/main/images/Screenshot_20240921_211348.png) |
+| Registration                                                                         |   | Login                                                                                   | Home | ImageDetails |
+|--------------------------------------------------------------------------------------|---|-----------------------------------------------------------------------------------------|------|--------------|
+| ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/login.png) |   | ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/register.png) |![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/Screenshot_20240921_211348.png)      |![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/Screenshot_20240921_211348.png)              |
 ## Built With 🛠
 
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android

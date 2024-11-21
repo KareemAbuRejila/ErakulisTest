@@ -5,9 +5,9 @@
 ## Screenshots
 
 
-| Registration                                                                            |   | Login                                                                                | Home | ImageDetails |
-|-----------------------------------------------------------------------------------------|---|--------------------------------------------------------------------------------------|------|--------------|
-| ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/register.png) |   | ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/login.png) |![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/Screenshot_20240921_211348.png)      |![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/Screenshot_20240921_211348.png)              |
+| Registration                                                                            |   | Login                                                                                | Home                                                                                | homeDetails                                                                               | ImageDetails                                                                                |
+|-----------------------------------------------------------------------------------------|---|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/register.png) |   | ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/login.png) | ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/home.png) | ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/home_error.png) | ![IMAGE](https://github.com/KareemAbuRejila/ErakulisTest/blob/main/images/imageDetails.png) |
 ## Built With 🛠
 
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android

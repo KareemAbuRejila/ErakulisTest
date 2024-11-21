@@ -34,11 +34,10 @@ fun RegistrationScreen(
     val password = remember { mutableStateOf("") }
     val age = remember { mutableStateOf("") }
     val errorMessage = viewModel.errorMessage.collectAsState()
-    val isRegisterSuccess = viewModel.isRegisterSuccess.collectAsState(initial = false)
+    val token = viewModel.userToken.collectAsState()
 
-    if (isRegisterSuccess.value) {
-        onRegisterSuccess()
-    }
+    token.value?.let { onRegisterSuccess() }
+
 
     Column(
         modifier = Modifier

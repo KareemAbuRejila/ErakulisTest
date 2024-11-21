@@ -9,7 +9,9 @@ import com.dotech.erakulistest.data.local.dao.UserDao
 import com.dotech.erakulistest.data.local.repositories.ImagesLocalRepo
 import com.dotech.erakulistest.data.remote.apis.PixbayApi
 import com.dotech.erakulistest.data.repositories.ImagesRepoImpl
+import com.dotech.erakulistest.data.repositories.UserRepoImpl
 import com.dotech.erakulistest.domain.repositories.ImagesRepo
+import com.dotech.erakulistest.domain.repositories.UserRepo
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -72,6 +74,5 @@ class AppModule {
             context = context, api = pixbayApi, imagesLocalRepo = imagesLocalRepo
         )
     }
-
 
 }

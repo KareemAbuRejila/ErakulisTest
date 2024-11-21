@@ -29,7 +29,7 @@ import com.dotech.erakulistest.presentation.theme.ErakulisTestTheme
 fun LoginScreen(
     viewModel: LoginViewModel = hiltViewModel(),
     onNavigateToRegister: () -> Unit,
-    onLoginSuccess: (token: String) -> Unit,
+    onLoginSuccess: () -> Unit,
     onNavigateToForgotPassword: () -> Unit,
     onNavigateToHelp: () -> Unit,
 ) {
@@ -39,7 +39,7 @@ fun LoginScreen(
     val errorMessage = viewModel.errorMessage.collectAsState()
 
 
-    token.value?.let { onLoginSuccess(it) }
+    token.value?.let { onLoginSuccess() }
 
     Column(
         modifier = Modifier

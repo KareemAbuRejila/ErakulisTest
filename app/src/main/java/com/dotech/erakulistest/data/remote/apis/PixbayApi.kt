@@ -2,6 +2,8 @@ package com.dotech.erakulistest.data.remote.apis
 
 import com.dotech.erakulistest.BuildConfig
 import com.dotech.erakulistest.data.models.ImageDTO
+import com.dotech.erakulistest.data.models.ImageDetails
+import com.dotech.erakulistest.data.models.ImageDetailsResponse
 import com.dotech.erakulistest.data.models.PixBayResponse
 import com.dotech.erakulistest.data.remote.Constrains.API
 import retrofit2.Call
@@ -26,5 +28,5 @@ interface PixbayApi {
     fun getImage(
         @Query("key") apiKey: String = BuildConfig.API_KEY,
         @Query("imageId") imageId: String
-        ): Call<String>
+        ): ImageDetailsResponse
 }

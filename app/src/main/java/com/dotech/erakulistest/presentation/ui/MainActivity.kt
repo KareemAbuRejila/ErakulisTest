@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -17,6 +18,7 @@ import com.dotech.erakulistest.presentation.theme.ErakulisTestTheme
 import com.dotech.erakulistest.presentation.ui.auth.login.LoginScreen
 import com.dotech.erakulistest.presentation.ui.auth.register.RegistrationScreen
 import com.dotech.erakulistest.presentation.ui.home.HomeScreen
+import com.dotech.erakulistest.presentation.ui.home.HomeViewModel
 import com.dotech.erakulistest.presentation.ui.image_details.ImageDetailsScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -50,8 +52,8 @@ class MainActivity : ComponentActivity() {
                             route = Screens.LoginScreen.route
                         ) {
                             LoginScreen(
-                                onLoginSuccess = {token->
-                                    navController.navigate(Screens.HomeScreen.route + "/{$PARAM_IMG_ID}")
+                                onLoginSuccess = {
+                                    navController.navigate(Screens.HomeScreen.route)
                                 },
                                 onNavigateToRegister = {
                                     navController.navigate(Screens.RegistrationScreen.route)
@@ -69,7 +71,9 @@ class MainActivity : ComponentActivity() {
                         composable(
                             route = Screens.HomeScreen.route
                         ){
-                            HomeScreen(navController = navController)
+                            HomeScreen(
+                                navController = navController
+                            )
                         }
                         composable(
                             route = Screens.ImageDetails.route + "/{$PARAM_IMG_ID}"

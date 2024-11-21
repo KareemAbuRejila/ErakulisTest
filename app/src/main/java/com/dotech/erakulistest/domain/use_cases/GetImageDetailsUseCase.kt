@@ -18,8 +18,8 @@ class GetImageDetailsUseCase  @Inject constructor(
     operator fun invoke(imageId: String): Flow<Resource<ImageDetails>> = flow {
         try {
             emit(Resource.Loading())
-//            val img = repo.getImage(imageId)
-//            emit(Resource.Success(img))
+            val img = repo.getImage(imageId)
+            emit(Resource.Success(img))
         } catch (e: Exception) {
             emit(Resource.Error(e.message ?: "Exception", data = null))
         } catch (e: SocketTimeoutException) {

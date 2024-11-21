@@ -5,23 +5,26 @@ import androidx.lifecycle.viewModelScope
 import at.favre.lib.crypto.bcrypt.BCrypt
 import com.dotech.erakulistest.data.local.dao.UserDao
 import com.dotech.erakulistest.data.models.User
+import com.dotech.erakulistest.data.utils.SessionManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import java.util.UUID
 import javax.inject.Inject
 
 
 @HiltViewModel
 class RegistrationViewModel @Inject constructor(
-    private val userDao: UserDao
+    private val userDao: UserDao,
+    private val sessionManager: SessionManager
 ) : ViewModel() {
 
     private val _errorMessage = MutableStateFlow<String?>(null)
     val errorMessage: StateFlow<String?> = _errorMessage
 
-    private val _isRegisterSuccess = MutableStateFlow(false)
-    val isRegisterSuccess: StateFlow<Boolean> = _isRegisterSuccess
+    private val _userToken = MutableStateFlow<String?>(null)
+    val userToken: StateFlow<String?> = _userToken
 
     fun register(email: String, password: String, age: Int?) {
         _errorMessage.value = null
@@ -46,7 +49,9 @@ class RegistrationViewModel @Inject constructor(
                 val hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray())
 
                 userDao.registerUser(User(email = email, password = hashedPassword, age = age))
-                _isRegisterSuccess.value = true
+                val token = UUID.randomUUID().toString()
+                sessionManager.saveToken(token)
+                _userToken.value = token
             }
         }
     }

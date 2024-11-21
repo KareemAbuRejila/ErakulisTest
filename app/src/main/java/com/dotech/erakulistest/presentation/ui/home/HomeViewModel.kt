@@ -5,18 +5,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dotech.erakulistest.data.models.Resource
-import com.dotech.erakulistest.domain.use_cases.GetCoinsUseCase
+import com.dotech.erakulistest.data.utils.SessionManager
+import com.dotech.erakulistest.domain.use_cases.GetImagesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val getImagesUseCase: GetCoinsUseCase,
-
+    private val getImagesUseCase: GetImagesUseCase,
+    private val sessionManager: SessionManager
 ) : ViewModel() {
 
     private val _state = mutableStateOf(HomeScreenState())
@@ -42,8 +41,8 @@ class HomeViewModel @Inject constructor(
             }
         }.launchIn(viewModelScope)
     }
-    fun logout(){
-
+    fun logout() {
+        sessionManager.clearSession()
     }
 
 }

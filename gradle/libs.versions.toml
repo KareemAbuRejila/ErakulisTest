@@ -66,6 +66,7 @@ androidx-arch-core-testing = {group="androidx.arch.core",name="core-testing",ver
 androidx-material3-icons = { group = "androidx.compose.material", name = "material-icons-extended" }
 #Coil - AsyncImage
 coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
+#coil-okttp = {group = "io.coil-kt", name = "coil-network-okhttp", version.ref = "coil"}
 
 #Coroutines
 org-jetbrains-kotlinx-coroutine-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines_ver" }

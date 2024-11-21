@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import at.favre.lib.crypto.bcrypt.BCrypt
 import com.dotech.erakulistest.data.local.dao.UserDao
+import com.dotech.erakulistest.data.utils.SessionManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -13,7 +14,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    private val userDao: UserDao
+    private val userDao: UserDao,
+    private val sessionManager: SessionManager
 ) : ViewModel() {
 
 
@@ -22,6 +24,14 @@ class LoginViewModel @Inject constructor(
 
     private val _userToken = MutableStateFlow<String?>(null)
     val userToken: StateFlow<String?> = _userToken
+
+    init {
+        checkToken()
+    }
+
+    private fun checkToken(){
+        _userToken.value = sessionManager.getToken()
+    }
 
     fun login(email: String, password: String) {
         _errorMessage.value = null
@@ -44,6 +54,7 @@ class LoginViewModel @Inject constructor(
                     // Generate a unique token
                     val token = UUID.randomUUID().toString()
                     userDao.updateUserToken(email, token)
+                    sessionManager.saveToken(token)
                     _userToken.value = token
                 } else {
                     _errorMessage.value = "Invalid email or password"

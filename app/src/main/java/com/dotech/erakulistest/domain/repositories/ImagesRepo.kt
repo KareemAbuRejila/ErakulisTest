@@ -11,5 +11,6 @@ interface ImagesRepo {
 
 
     suspend fun getAllImages(): List<ImageDTO>
+    fun getImage(imageId: String): ImageDetails
 
 }

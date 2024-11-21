@@ -22,5 +22,6 @@ class ImagesRepoImpl @Inject constructor(
 ): ImagesRepo {
 
     override suspend fun getAllImages() = api.getImages(page = 1).hits
+    override fun getImage(imageId: String) = api.getImage(imageId = imageId).imageDetailsList[0]
 
 }

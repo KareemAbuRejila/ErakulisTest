@@ -11,7 +11,7 @@ import retrofit2.HttpException
 import java.net.SocketTimeoutException
 import javax.inject.Inject
 
-class GetCoinsUseCase @Inject constructor(
+class GetImagesUseCase @Inject constructor(
     private val repo: ImagesRepo
 ) {
 

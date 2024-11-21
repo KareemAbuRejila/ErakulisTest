@@ -85,6 +85,7 @@ dependencies {
     //Icons
     implementation(libs.androidx.material3.icons)
     implementation(libs.coil)
+//    implementation(libs.coil.okttp)
 
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
